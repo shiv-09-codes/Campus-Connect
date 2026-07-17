@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignments | Student Hub</title>
+  <link rel="stylesheet" href="assignment.css">
+</head>
+<body>
+
+  <!-- Header section -->
+  <header class="navbar">
+    <h1 class="logo">Student Hub</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="assignment.html" class="active">Assignments</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="dsa.html">DSA</a></li>
+        <li><a href="placement.html">Placement</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="assignment-header">
+      <h2>Assignments</h2>
+      <p>Track and manage your pending work</p>
+    </section>
+
+    <!-- Add assignment form -->
+    <section class="add-form">
+      <input type="text" id="assignmentInput" placeholder="Enter assignment name...">
+      <input type="date" id="dueDateInput">
+      <button id="addBtn">Add</button>
+    </section>
+
+    <!-- Assignment list -->
+    <section class="assignment-list" id="assignmentList">
+      <!-- Items injected here by JS -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Student Hub. Built by Shiv.</p>
+  </footer>
+
+  <script src="assignment.js"></script>
+</body>
+</html>
