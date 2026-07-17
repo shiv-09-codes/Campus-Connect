@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Student Hub</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+  <!-- Header section -->
+  <header class="navbar">
+    <h1 class="logo">Student Hub</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="assignment.html">Assignments</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="dsa.html">DSA</a></li>
+        <li><a href="placement.html">Placement</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="dashboard-header">
+      <h2>Your Dashboard</h2>
+      <p>Track your progress across all sections</p>
+    </section>
+
+    <!-- Stat cards -->
+    <section class="stats">
+      <div class="stat-card">
+        <h3 id="assignmentCount">0</h3>
+        <p>Assignments Pending</p>
+      </div>
+      <div class="stat-card">
+        <h3 id="notesCount">0</h3>
+        <p>Notes Saved</p>
+      </div>
+      <div class="stat-card">
+        <h3 id="dsaCount">0</h3>
+        <p>DSA Problems Solved</p>
+      </div>
+      <div class="stat-card">
+        <h3 id="streakCount">0</h3>
+        <p>Day Streak 🔥</p>
+      </div>
+    </section>
+
+    <!-- Progress bar -->
+    <section class="progress-section">
+      <h3>Overall Completion</h3>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <p id="progressText">0% complete</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Student Hub. Built by Shiv.</p>
+  </footer>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
