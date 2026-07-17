@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes | Student Hub</title>
+  <link rel="stylesheet" href="notes.css">
+</head>
+<body>
+
+  <!-- Header section -->
+  <header class="navbar">
+    <h1 class="logo">Student Hub</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="assignment.html">Assignments</a></li>
+        <li><a href="notes.html" class="active">Notes</a></li>
+        <li><a href="dsa.html">DSA</a></li>
+        <li><a href="placement.html">Placement</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="notes-header">
+      <h2>Notes</h2>
+      <p>Save and organize notes by subject</p>
+    </section>
+
+    <!-- Add note form -->
+    <section class="add-form">
+      <input type="text" id="subjectInput" placeholder="Subject (e.g. DSA, Python)...">
+      <textarea id="noteInput" placeholder="Write your note here..." rows="3"></textarea>
+      <button id="addBtn">Save Note</button>
+    </section>
+
+    <!-- Filter by subject -->
+    <section class="filter-bar">
+      <label for="subjectFilter">Filter by subject:</label>
+      <select id="subjectFilter">
+        <option value="all">All</option>
+      </select>
+    </section>
+
+    <!-- Notes list -->
+    <section class="notes-list" id="notesList">
+      <!-- Notes injected here by JS -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Student Hub. Built by Shiv.</p>
+  </footer>
+
+  <script src="notes.js"></script>
+</body>
+</html>
