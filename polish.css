@@ -1,0 +1,9 @@
+.card, .stat-card, .streak-card, .assignment-item,
+.dsa-item, .note-card, .resource-card, .checklist-item {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover, .resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+.dsa-item:hover { transform: translateX(4px); }

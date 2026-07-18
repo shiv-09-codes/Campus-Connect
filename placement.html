@@ -4,24 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Placement | Student Hub</title>
+  <link rel="stylesheet" href="theme.css">
   <link rel="stylesheet" href="placement.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="polish.css">
 </head>
 <body>
 
-  <!-- Header section -->
-  <header class="navbar">
-    <h1 class="logo">Student Hub</h1>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="assignment.html">Assignments</a></li>
-        <li><a href="notes.html">Notes</a></li>
-        <li><a href="dsa.html">DSA</a></li>
-        <li><a href="placement.html" class="active">Placement</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="navbarContainer"></div>
 
   <main>
     <section class="placement-header">
@@ -29,7 +19,6 @@
       <p>Track your readiness across resume, skills, and interviews</p>
     </section>
 
-    <!-- Readiness progress -->
     <section class="progress-section">
       <h3>Overall Readiness</h3>
       <div class="progress-bar">
@@ -38,30 +27,26 @@
       <p id="progressText">0% ready</p>
     </section>
 
-    <!-- Checklist -->
     <section class="checklist-section">
       <h3>Checklist</h3>
-      <div class="checklist" id="checklist">
-        <!-- Items injected by JS -->
-      </div>
+      <div class="checklist" id="checklist"></div>
     </section>
 
-    <!-- Quick resources -->
     <section class="resources-section">
       <h3>Quick Resources</h3>
       <div class="resources">
-        <a href="https://leetcode.com" target="_blank" class="resource-card">💻 LeetCode</a>
-        <a href="https://www.geeksforgeeks.org" target="_blank" class="resource-card">📘 GeeksforGeeks</a>
-        <a href="https://www.linkedin.com" target="_blank" class="resource-card">🔗 LinkedIn</a>
-        <a href="https://www.glassdoor.com" target="_blank" class="resource-card">🏢 Glassdoor</a>
+        <a href="https://leetcode.com" target="_blank" class="resource-card">LeetCode</a>
+        <a href="https://www.geeksforgeeks.org" target="_blank" class="resource-card">GeeksforGeeks</a>
+        <a href="https://www.linkedin.com" target="_blank" class="resource-card">LinkedIn</a>
+        <a href="https://www.glassdoor.com" target="_blank" class="resource-card">Glassdoor</a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Student Hub. Built by Shiv.</p>
-  </footer>
+  <div id="footerContainer"></div>
 
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
   <script src="placement.js"></script>
 </body>
 </html>

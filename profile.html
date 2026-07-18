@@ -4,25 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profile | Student Hub</title>
+  <link rel="stylesheet" href="theme.css">
   <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="polish.css">
 </head>
 <body>
 
-  <!-- Header section -->
-  <header class="navbar">
-    <h1 class="logo">Student Hub</h1>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="assignment.html">Assignments</a></li>
-        <li><a href="notes.html">Notes</a></li>
-        <li><a href="dsa.html">DSA</a></li>
-        <li><a href="placement.html">Placement</a></li>
-        <li><a href="profile.html" class="active">Profile</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="navbarContainer"></div>
 
   <main>
     <section class="profile-header">
@@ -30,17 +19,15 @@
       <p>Manage your personal information</p>
     </section>
 
-    <!-- Profile card (view mode) -->
     <section class="profile-card" id="profileView">
       <div class="avatar" id="avatarInitial">S</div>
       <h3 id="viewName">Your Name</h3>
       <p id="viewBranch">Branch • Year</p>
       <p id="viewEmail">email@example.com</p>
       <p class="bio" id="viewBio">No bio added yet.</p>
-      <button id="editBtn">✏️ Edit Profile</button>
+      <button id="editBtn">Edit Profile</button>
     </section>
 
-    <!-- Edit form (hidden by default) -->
     <section class="profile-form" id="profileForm" hidden>
       <label for="nameInput">Full Name</label>
       <input type="text" id="nameInput" placeholder="e.g. Shiv Sharma">
@@ -63,16 +50,16 @@
       <textarea id="bioInput" rows="3" placeholder="A short line about yourself..."></textarea>
 
       <div class="form-actions">
-        <button id="saveBtn">💾 Save</button>
+        <button id="saveBtn">Save</button>
         <button id="cancelBtn" type="button">Cancel</button>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Student Hub. Built by Shiv.</p>
-  </footer>
+  <div id="footerContainer"></div>
 
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
   <script src="profile.js"></script>
 </body>
 </html>

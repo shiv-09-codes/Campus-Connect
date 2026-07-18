@@ -4,61 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Hub</title>
+  <link rel="stylesheet" href="theme.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="polish.css">
 </head>
 <body>
 
-  <!-- Header section -->
-  <header class="navbar">
-    <h1 class="logo">Student Hub</h1>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="assignment.html">Assignments</a></li>
-        <li><a href="notes.html">Notes</a></li>
-        <li><a href="dsa.html">DSA</a></li>
-        <li><a href="placement.html">Placement</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="navbarContainer"></div>
 
-  <!-- Hero / Welcome section -->
   <main>
     <section class="hero">
-      <h2>Welcome Back 👋</h2>
+      <h2>Welcome Back</h2>
       <p>Manage your assignments, notes, DSA practice and placement prep — all in one place.</p>
     </section>
 
-    <!-- Quick access cards -->
     <section class="cards">
       <a href="dashboard.html" class="card">
-        <h3>📊 Dashboard</h3>
+        <h3>Dashboard</h3>
         <p>View your overall progress</p>
       </a>
       <a href="assignment.html" class="card">
-        <h3>📝 Assignments</h3>
+        <h3>Assignments</h3>
         <p>Track pending and submitted work</p>
       </a>
       <a href="notes.html" class="card">
-        <h3>📒 Notes</h3>
+        <h3>Notes</h3>
         <p>Access subject-wise notes</p>
       </a>
       <a href="dsa.html" class="card">
-        <h3>💻 DSA</h3>
+        <h3>DSA</h3>
         <p>Practice problems and track streaks</p>
       </a>
       <a href="placement.html" class="card">
-        <h3>🎯 Placement</h3>
+        <h3>Placement</h3>
         <p>Resume, interview prep and resources</p>
+      </a>
+      <a href="profile.html" class="card">
+        <h3>Profile</h3>
+        <p>Manage your personal information</p>
       </a>
     </section>
   </main>
 
-  <!-- Footer section -->
-  <footer>
-    <p>&copy; 2026 Student Hub. Built by Shiv.</p>
-  </footer>
+  <div id="footerContainer"></div>
 
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

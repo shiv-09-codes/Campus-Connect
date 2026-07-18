@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Profile page loaded successfully");
-
-  // View mode elements
   const profileView = document.getElementById("profileView");
   const avatarInitial = document.getElementById("avatarInitial");
   const viewName = document.getElementById("viewName");
@@ -10,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const viewBio = document.getElementById("viewBio");
   const editBtn = document.getElementById("editBtn");
 
-  // Form elements
   const profileForm = document.getElementById("profileForm");
   const nameInput = document.getElementById("nameInput");
   const branchInput = document.getElementById("branchInput");
@@ -20,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const saveBtn = document.getElementById("saveBtn");
   const cancelBtn = document.getElementById("cancelBtn");
 
-  // Default profile — used only if nothing saved yet
   const defaultProfile = {
     name: "Your Name",
     branch: "Computer Engineering",
@@ -31,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let profile = JSON.parse(localStorage.getItem("userProfile")) || defaultProfile;
 
-  // Fill the view card with current profile data
   function renderView() {
     avatarInitial.textContent = profile.name.charAt(0).toUpperCase() || "S";
     viewName.textContent = profile.name;
@@ -40,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     viewBio.textContent = profile.bio || "No bio added yet.";
   }
 
-  // Fill the form inputs with current profile data (for editing)
   function fillForm() {
     nameInput.value = profile.name === defaultProfile.name ? "" : profile.name;
     branchInput.value = profile.branch === defaultProfile.branch ? "" : profile.branch;
@@ -49,20 +42,17 @@ document.addEventListener("DOMContentLoaded", () => {
     bioInput.value = profile.bio === defaultProfile.bio ? "" : profile.bio;
   }
 
-  // Switch to edit mode
   editBtn.addEventListener("click", () => {
     fillForm();
     profileView.hidden = true;
     profileForm.hidden = false;
   });
 
-  // Cancel edit — discard changes, go back to view
   cancelBtn.addEventListener("click", () => {
     profileForm.hidden = true;
     profileView.hidden = false;
   });
 
-  // Save changes
   saveBtn.addEventListener("click", () => {
     profile = {
       name: nameInput.value.trim() || defaultProfile.name,
@@ -71,13 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
       email: emailInput.value.trim() || defaultProfile.email,
       bio: bioInput.value.trim() || defaultProfile.bio
     };
-
     localStorage.setItem("userProfile", JSON.stringify(profile));
-
     renderView();
     profileForm.hidden = true;
     profileView.hidden = false;
   });
 
-  renderView(); // initial render on load
+  renderView();
 });

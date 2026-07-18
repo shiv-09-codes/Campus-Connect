@@ -4,24 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DSA | Student Hub</title>
+  <link rel="stylesheet" href="theme.css">
   <link rel="stylesheet" href="dsa.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="polish.css">
 </head>
 <body>
 
-  <!-- Header section -->
-  <header class="navbar">
-    <h1 class="logo">Student Hub</h1>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="assignment.html">Assignments</a></li>
-        <li><a href="notes.html">Notes</a></li>
-        <li><a href="dsa.html" class="active">DSA</a></li>
-        <li><a href="placement.html">Placement</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="navbarContainer"></div>
 
   <main>
     <section class="dsa-header">
@@ -29,7 +19,6 @@
       <p>Log problems you solve and build your streak</p>
     </section>
 
-    <!-- Streak summary -->
     <section class="streak-summary">
       <div class="streak-card">
         <h3 id="totalSolved">0</h3>
@@ -37,11 +26,10 @@
       </div>
       <div class="streak-card">
         <h3 id="currentStreak">0</h3>
-        <p>Day Streak 🔥</p>
+        <p>Day Streak</p>
       </div>
     </section>
 
-    <!-- Add problem form -->
     <section class="add-form">
       <input type="text" id="problemInput" placeholder="Problem name (e.g. Two Sum)...">
       <select id="difficultyInput">
@@ -52,16 +40,13 @@
       <button id="addBtn">Log Solved</button>
     </section>
 
-    <!-- Problem list -->
-    <section class="dsa-list" id="dsaList">
-      <!-- Items injected here by JS -->
-    </section>
+    <section class="dsa-list" id="dsaList"></section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Student Hub. Built by Shiv.</p>
-  </footer>
+  <div id="footerContainer"></div>
 
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
   <script src="dsa.js"></script>
 </body>
 </html>

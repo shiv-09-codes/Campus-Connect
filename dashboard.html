@@ -4,24 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard | Student Hub</title>
+  <link rel="stylesheet" href="theme.css">
   <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="polish.css">
 </head>
 <body>
 
-  <!-- Header section -->
-  <header class="navbar">
-    <h1 class="logo">Student Hub</h1>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="dashboard.html" class="active">Dashboard</a></li>
-        <li><a href="assignment.html">Assignments</a></li>
-        <li><a href="notes.html">Notes</a></li>
-        <li><a href="dsa.html">DSA</a></li>
-        <li><a href="placement.html">Placement</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="navbarContainer"></div>
 
   <main>
     <section class="dashboard-header">
@@ -29,7 +19,6 @@
       <p>Track your progress across all sections</p>
     </section>
 
-    <!-- Stat cards -->
     <section class="stats">
       <div class="stat-card">
         <h3 id="assignmentCount">0</h3>
@@ -45,11 +34,10 @@
       </div>
       <div class="stat-card">
         <h3 id="streakCount">0</h3>
-        <p>Day Streak 🔥</p>
+        <p>Day Streak</p>
       </div>
     </section>
 
-    <!-- Progress bar -->
     <section class="progress-section">
       <h3>Overall Completion</h3>
       <div class="progress-bar">
@@ -59,10 +47,10 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Student Hub. Built by Shiv.</p>
-  </footer>
+  <div id="footerContainer"></div>
 
+  <script src="navbar.js"></script>
+  <script src="footer.js"></script>
   <script src="dashboard.js"></script>
 </body>
 </html>

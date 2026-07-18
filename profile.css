@@ -1,188 +1,39 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
+.profile-header { text-align: center; padding: 44px 16px 22px; }
+.profile-header h2 { font-size: 1.9rem; color: var(--color-primary); margin-bottom: 6px; }
+.profile-header p { color: var(--color-text-muted); }
 
-body {
-  background-color: #f4f6f8;
-  color: #222;
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #1e293b;
-  padding: 16px 32px;
-  color: #fff;
-}
-
-.logo {
-  font-size: 1.5rem;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: #38bdf8;
-}
-
-/* Header */
-.profile-header {
-  text-align: center;
-  padding: 40px 16px 20px;
-}
-
-.profile-header h2 {
-  font-size: 1.8rem;
-  margin-bottom: 6px;
-}
-
-.profile-header p {
-  color: #555;
-}
-
-/* Profile card (view mode) */
 .profile-card {
-  max-width: 420px;
-  margin: 0 auto 40px;
-  background: #fff;
-  border-radius: 14px;
-  padding: 32px 24px;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  max-width: 420px; margin: 0 auto 40px; background: var(--color-card);
+  border-radius: var(--radius-lg); padding: 34px 24px; text-align: center;
+  box-shadow: var(--shadow); border-top: 3px solid var(--color-accent);
 }
-
 .avatar {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: #38bdf8;
-  color: #fff;
-  font-size: 1.8rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 16px;
+  width: 72px; height: 72px; border-radius: 50%; background: var(--color-primary);
+  color: #fff; font-family: var(--font-heading); font-size: 1.8rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;
 }
-
-.profile-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 4px;
-}
-
-.profile-card p {
-  color: #666;
-  font-size: 0.9rem;
-  margin-bottom: 4px;
-}
-
-.profile-card .bio {
-  margin-top: 12px;
-  color: #444;
-  font-style: italic;
-}
-
+.profile-card h3 { font-size: 1.3rem; margin-bottom: 4px; color: var(--color-primary); }
+.profile-card p { color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 4px; }
+.profile-card .bio { margin-top: 12px; color: var(--color-text); font-style: italic; }
 .profile-card button {
-  margin-top: 20px;
-  background-color: #38bdf8;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background 0.2s;
+  margin-top: 20px; background-color: var(--color-accent); color: #fff; border: none;
+  padding: 10px 20px; border-radius: var(--radius); font-weight: 600;
 }
+.profile-card button:hover { background-color: var(--color-accent-hover); }
 
-.profile-card button:hover {
-  background-color: #0ea5e9;
-}
-
-/* Edit form */
 .profile-form {
-  max-width: 420px;
-  margin: 0 auto 40px;
-  background: #fff;
-  border-radius: 14px;
-  padding: 28px 24px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  max-width: 420px; margin: 0 auto 40px; background: var(--color-card);
+  border-radius: var(--radius-lg); padding: 28px 24px; box-shadow: var(--shadow);
+  display: flex; flex-direction: column; gap: 12px;
 }
-
-.profile-form label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #444;
+.profile-form label { font-size: 0.85rem; font-weight: 600; color: var(--color-primary); }
+.profile-form input, .profile-form select, .profile-form textarea {
+  padding: 10px 12px; border: 1px solid var(--color-border); border-radius: var(--radius);
+  font-size: 0.95rem; font-family: inherit; resize: vertical; background: var(--color-bg);
 }
-
-.profile-form input,
-.profile-form select,
-.profile-form textarea {
-  padding: 10px 12px;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-family: inherit;
-  resize: vertical;
-}
-
-.form-actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 8px;
-}
-
-.form-actions button {
-  flex: 1;
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-#saveBtn {
-  background-color: #38bdf8;
-  color: #fff;
-}
-
-#saveBtn:hover {
-  background-color: #0ea5e9;
-}
-
-#cancelBtn {
-  background-color: #e2e8f0;
-  color: #333;
-}
-
-#cancelBtn:hover {
-  background-color: #cbd5e1;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 16px;
-  color: #888;
-  font-size: 0.85rem;
-}
+.form-actions { display: flex; gap: 10px; margin-top: 8px; }
+.form-actions button { flex: 1; padding: 10px; border-radius: var(--radius); border: none; font-weight: 600; }
+#saveBtn { background-color: var(--color-accent); color: #fff; }
+#saveBtn:hover { background-color: var(--color-accent-hover); }
+#cancelBtn { background-color: #eae7dd; color: var(--color-text); }
+#cancelBtn:hover { background-color: #ddd7c9; }
